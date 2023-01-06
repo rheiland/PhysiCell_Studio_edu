@@ -43,8 +43,13 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_microenv.PNG)
-* the Microenvironment tab that defines just one substrate; however, it is not used in the default `template` model
+* the Microenvironment tab where substrates and signals are defined. Just one substrate is defined in the default `template` model, but it is not used (yet).
 ---
+
+![](images/studio_template_celltypes.PNG)
+* the Cell Types tab where different cell types can be defined to have different phenotypic behaviors. For the default `template` model, there is only one cell type defined (initially). Note there are subtabs which define each cell type's phenotype.
+---
+
 
 ![](images/studio_template_run.PNG)
 * click the `Run simulation`. Information about the overall model will quickly appear, followed by delayed output lines whenever output files are saved (based on the time intervals on the `Config Basics` tab).
@@ -61,23 +66,23 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ## Template model: changing initial conditions
 
 ![](images/studio_template_ICs_disk.PNG)
-* In the `ICs` (Initial Conditions) tab, create a disk of hexagonally packed cells by specifying the parameters shown here. Then press `Plot` and `->cells.csv`.
+* the `ICs` (Initial Conditions) tab lets us define some relatively simple starting positions for cells. The output will be a .csv file containing: `x,y,z,cell type` Here, we create a disk of hexagonally packed cells. Press `Plot` to see results and `->cells.csv` to write the .csv file. You will then provide this .csv filename on the Config Basics tab.
 ---
 
 ![](images/studio_template_config_ICs_enable_csv.PNG)
-* We need to enable the cells.csv and change the folder to be "."
+* We need to :heavy_check_mark: enable the cells.csv and change the folder to be "."
 ---
 
 ![](images/studio_template_user_params_no_random_cells.PNG)
-* in the `User Params` tab, change # of randomly placed cells to be 0 (we just want to use the cells in the ICs .csv).
+* the `User Params` tab defines parameters considered to be "global" to a simulation (vs. `Custom Data`, the subtab in `Cell Types` which define parameters specific to cell types). Here, we change # of randomly placed cells to be 0 (because we only want to use the cells defined in the .csv file).
 ---
 
 ![](images/studio_template_run_disk.PNG)
-* when we run the simulation now, we see there are 1150 cells initially.
+* when we run the simulation now, we see there are 1150 cells initially (all from the cells.csv).
 ---
 
 ![](images/studio_template_plot_disk_20hr.PNG)
-* results after 20 hours.
+* results after 20 hours. Note the cells are unrealistically overlapping, a situation we can adjust with additional edits to the model.
 ---
 
 

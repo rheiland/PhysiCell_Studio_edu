@@ -1,13 +1,16 @@
-# PhysiCell_Studio_edu
-Learning PhysiCell Studio
+# PhysiCell Studio tutorial
 
-Download a bundled PhysiCell Studio with the "template" executable model. Until we find a more permanent site for these bundles, they are currently on Dropbox:
-* for Windows: https://www.dropbox.com/s/wiwdd09f8pmmyyk/PhysiCell_Studio_win.zip?dl=0  (about 334 MB)
-* for Mac: https://www.dropbox.com/s/9e52bcupp663xci/PhysiCell_Studio.zip?dl=0   (about 227 MB)
+# Installation
+
+* Download the Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases (however, it will not contain an executable model, e.g., the `template` executable)
+* Download a bundled PhysiCell Studio which includes the "template" executable model. Until we find a more permanent site for these bundles, they are currently on Dropbox:
+
+  * for Windows: https://www.dropbox.com/s/wiwdd09f8pmmyyk/PhysiCell_Studio_win.zip?dl=0  (about 334 MB)
+  * for Mac: https://www.dropbox.com/s/9e52bcupp663xci/PhysiCell_Studio.zip?dl=0   (about 227 MB)
 
 You will run the Studio from the command line, e.g., Powershell on Windows; Terminal on Mac.
 
-# On Windows
+## Windows bundle
 Navigate (via `cd` command) to the folder where you unzipped the Studio and then `cd` to the folder containing `PhysiCell_Studio.exe` and run it, e.g.:
 ```
 PS C:\Users\Owner\PhysiCell_Studio_win\PhysiCell_Studio> .\PhysiCell_Studio.exe
@@ -18,7 +21,7 @@ self.pmb_root_dir =  C:\Users\Owner\PhysiCell_Studio_win
 self.config_dir =  C:\Users\Owner\PhysiCell_Studio_win\PhysiCell_Studio\config
 ```
 
-# On MacOS
+## MacOS bundle
 Uncompress the .zip file, e.g., navigate to its directory and run `unzip PhysiCell_Studio.zip`. This will reveal a `PhysiCell_Studio.app` directory. 
 Open a Finder window, navigate to this .app, right-click on it and select "Open". You'll be warned that "macOS cannot verify the developer...", but click the "Open" button on that warning dialog window. 
 Then back in a Terminal window, navigate to the directory containing the `PhysiCell_Studio.app` and from there into `Contents/MacOS` and run the executable, e.g. :
@@ -36,9 +39,11 @@ When the Studio displays, it will load the "template" sample model's parameters 
 
 
 ![](images/studio_template_config.PNG)
+* the Configuration Basics tab that defines the domain and various high-level simulation parameters
+---
 
-![](images/studio_template_run.PNG)
-
+![](images/studio_template_microenv.PNG)
+* the Microenvironment tab that defines just one substrate; however, it is not used in the default `template` model
 ---
 
 ![](images/studio_template_run.PNG)

@@ -70,7 +70,7 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_config_ICs_enable_csv.PNG)
-* We need to :heavy_check_mark: enable the cells.csv and change the folder to be "."
+* In the `Config Basics` tab, we need to :heavy_check_mark: enable the cells.csv and change the folder to be "."
 ---
 
 ![](images/studio_template_user_params_no_random_cells.PNG)

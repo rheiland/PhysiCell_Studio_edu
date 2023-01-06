@@ -2,7 +2,10 @@
 
 # Installation
 
-* Download the Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases (however, it will not contain an executable model, e.g., the `template` executable)
+Either:
+* Download the Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases This option assumes you have installed a Python distribution with the necessary 3rd party modules needed for the Builder/Studio. It will also not contain an executable model that can be run, e.g., the `template` model. If you have downloaded PhysiCell and built an executable model there, you can use that one to run in the Studio.
+
+or:
 * Download a bundled PhysiCell Studio which includes the "template" executable model. Until we find a more permanent site for these bundles, they are currently on Dropbox:
 
   * for Windows: https://www.dropbox.com/s/wiwdd09f8pmmyyk/PhysiCell_Studio_win.zip?dl=0  (about 334 MB)
@@ -47,7 +50,7 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_celltypes.PNG)
-* the Cell Types tab where different cell types can be defined to have different phenotypic behaviors. For the default `template` model, there is only one cell type defined (initially). Note there are subtabs which define each cell type's phenotype.
+* the Cell Types tab where different cell types can be defined to have different phenotypic behaviors. For the default `template` model, there is only one cell type defined (initially). Note there are subtabs which define each cell type's phenotype. If you look at some of those subtabs, you'll see that the default `template` model allows cell death and mechanics, but no motility and no secretion/uptake of the substrate.
 ---
 
 
@@ -70,7 +73,7 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_config_ICs_enable_csv.PNG)
-* We need to :heavy_check_mark: enable the cells.csv and change the folder to be "."
+* In the `Config Basics` tab, we need to :heavy_check_mark: enable the cells.csv and change the folder to be "."
 ---
 
 ![](images/studio_template_user_params_no_random_cells.PNG)

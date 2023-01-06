@@ -2,7 +2,10 @@
 
 # Installation
 
-* Download the Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases (however, it will not contain an executable model, e.g., the `template` executable)
+Either:
+* Download the Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases This option assumes you have installed a Python distribution with the necessary 3rd party modules needed for the Builder/Studio. It will also not contain an executable model that can be run, e.g., the `template` model. If you have downloaded PhysiCell and built an executable model there, you can use that one to run in the Studio.
+
+or:
 * Download a bundled PhysiCell Studio which includes the "template" executable model. Until we find a more permanent site for these bundles, they are currently on Dropbox:
 
   * for Windows: https://www.dropbox.com/s/wiwdd09f8pmmyyk/PhysiCell_Studio_win.zip?dl=0  (about 334 MB)

@@ -88,4 +88,23 @@ When the Studio displays, it will load the "template" sample model's parameters 
 * results after 20 hours. Note the cells are unrealistically overlapping, a situation we can adjust with additional edits to the model.
 ---
 
+## Template model: diffusion
+
+![](images/template_diffusion_config.png)
+* In this version of the model, we will turn on diffusion of the substrate. First, in the Config tab, let's reduce the Max Time to 120 mins, set the Save intervals to 5 mins, and disable (uncheck) the cells.csv. Also, in the `User Params` tab, let's set the "number_of_cells" to 10 (not shown here).
+---
+
+![](images/template_diffusion_microenv.png)
+* In the `Microenvironment` tab, set the diffusion coef=1000, decay rate=0, and Dirichlet Boundary Conditions=38. In the `Run` tab, run the simulation.
+---
+
+![](images/template_diffusion_plot5min.png)
+* In the `Plot` tab, :heavy_check_mark: Substrates to display them and :heavy_check_mark: "fix" to fix absolute values for the color map (cmin=0, cmax=38, and press Enter after changing those values). Then plot the results at 5 mins.
+* ---
+
+![](images/template_diffusion_plot2hrs.png)
+* Plot the results at the end of the simulation (2 hrs). Note the substrate has diffused throughout the domain from the boundaries.
+
+![](images/template_diffusion_plot2hrs_cmap2.png)
+* Note if you uncheck "fix", the colormap will have a dynamic range, using whatever is min/max in the substrate data.
 

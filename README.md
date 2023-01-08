@@ -32,13 +32,26 @@ Then back in a Terminal window, navigate to the directory containing the `PhysiC
 ~/PhysiCell_Studio.app/Contents/MacOS$ ./PhysiCell_Studio
 ```
 
+## Linux installation                                                            
+In the instruction below, we assume, you have your local libraries installed at `~/.local/lib/` and your  local binaries are at `~/.local/bin/`. Please adjust the commands if necessary.
+                                                                                
+1. Use the first option (Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases) to download Studio into `~/.local/lib/`.
+    and navigate with `cd` into this directory.
+2. tar -xzvf PhysiCell-model-builder-2.10.1.tar.gz  # decompress the tar.gz file.
+3. ln -s PhysiCell-model-builder-2.10.1/ PhysiCell-model-builder  # symbolically link the current version to a generic name.
+4. cd ../bin  # navigate into your local binary folder.
+5. echo "python3 $HOME/.local/lib/PhysiCell-model-builder/bin/pmb.py --studio" > PhysiCell\_Studio  # write the PhysiCell executable file.
+6. chmod 775 PhysiCell\_Studio  # make the file executable.
+
+Now you should be able to start `PhysiCell\_Studio` from everywhere in the command line, by just typing `PhysiCell\_Studio`
+
 # Getting Started
 
 NOTE: if you do not use the menu `File -> Save as`, the .xml file that was loaded will be over-written when you run a simulation.
 
 ## Template model: default params
 
-When the Studio displays, it will load the "template" sample model's parameters by default. And it will select `template[.exe]` as the executable in the `Run` tab. (Note that the "Config" path in the `Run` tab will be different for Windows and Mac). But the first tab displayed is the `Config Basics` which defines the model's spatial domain, the simulation's Max Time, and various other high-level parameters, including how often output files are saved for plotting (`Save data(intervals)`).
+When the Studio displays, it will load the "template" sample model's parameters by default. And it will select `template[.exe]` as the executable in the `Run` tab. (Note, that the "Config" path in the `Run` tab will be different for Windows and Mac). But the first tab displayed is the `Config Basics` which defines the model's spatial domain, the simulation's Max Time, and various other high-level parameters, including how often output files are saved for plotting (`Save data(intervals)`).
 
 
 ![](images/studio_template_config.PNG)
@@ -50,7 +63,7 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_celltypes.PNG)
-* the Cell Types tab where different cell types can be defined to have different phenotypic behaviors. For the default `template` model, there is only one cell type defined (initially). Note there are subtabs which define each cell type's phenotype. If you look at some of those subtabs, you'll see that the default `template` model allows cell death and mechanics, but no motility and no secretion/uptake of the substrate.
+* the Cell Types tab where different cell types can be defined to have different phenotypic behaviors. For the default `template` model, there is only one cell type defined (initially). Note, there are subtabs which define each cell type's phenotype. If you look at some of those subtabs, you'll see that the default `template` model allows cell death and mechanics, but no motility and no secretion/uptake of the substrate.
 ---
 
 
@@ -59,7 +72,7 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_plot_t0.PNG)
-* At time=0, we see the initial conditions: 5 cells positioned randomly in the domain. Note the "5" is specified in the `User Params` tab as the "number_of_cells".
+* At time=0, we see the initial conditions: 5 cells positioned randomly in the domain. Note, the "5" is specified in the `User Params` tab as the "number_of_cells".
 ---
 
 ![](images/studio_template_plot_5days.PNG)
@@ -85,7 +98,7 @@ When the Studio displays, it will load the "template" sample model's parameters 
 ---
 
 ![](images/studio_template_plot_disk_20hr.PNG)
-* results after 20 hours. Note the cells are unrealistically overlapping, a situation we can adjust with additional edits to the model.
+* results after 20 hours. Note, the cells are unrealistically overlapping, a situation we can adjust with additional edits to the model.
 ---
 
 ## Template model: diffusion
@@ -103,8 +116,8 @@ When the Studio displays, it will load the "template" sample model's parameters 
 * ---
 
 ![](images/template_diffusion_plot2hrs.png)
-* Plot the results at the end of the simulation (2 hrs). Note the substrate has diffused throughout the domain from the boundaries.
+* Plot the results at the end of the simulation (2 hrs). Note, the substrate has diffused throughout the domain from the boundaries.
 
 ![](images/template_diffusion_plot2hrs_cmap2.png)
-* Note if you uncheck "fix", the colormap will have a dynamic range, using whatever is min/max in the substrate data.
+* Note, if you uncheck "fix", the colormap will have a dynamic range, using whatever is min/max in the substrate data.
 

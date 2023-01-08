@@ -33,17 +33,17 @@ Then back in a Terminal window, navigate to the directory containing the `PhysiC
 ```
 
 ## Linux installation                                                            
-In the instruction below, we assume, you have your local libraries installed at `~/.local/lib/` and your  local binaries are at `~/.local/bin/`. Please adjust the commands if necessary.
-                                                                                
-1. Use the first option (Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases) to download Studio into `~/.local/lib/`.
-    and navigate with `cd` into this directory.
-2. tar -xzvf PhysiCell-model-builder-2.10.1.tar.gz  # decompress the tar.gz file.
-3. ln -s PhysiCell-model-builder-2.10.1/ PhysiCell-model-builder  # symbolically link the current version to a generic name.
-4. cd ../bin  # navigate into your local binary folder.
-5. echo "python3 $HOME/.local/lib/PhysiCell-model-builder/bin/pmb.py --studio" > PhysiCell\_Studio  # write the PhysiCell executable file.
-6. chmod 775 PhysiCell\_Studio  # make the file executable.
+In the instruction below, we assume, your local libraries are installed at `~/.local/lib/` and your local binaries are at `~/.local/bin/`. Please adjust the commands if necessary.
 
-Now you should be able to start `PhysiCell\_Studio` from everywhere in the command line, by just typing `PhysiCell\_Studio`
+1. Use the first option (Model Builder/Studio from https://github.com/PhysiCell-Tools/PhysiCell-model-builder/releases) to download Studio into `~/.local/lib/`,
+    and navigate with `cd` into this directory.
+2. Type `tar -xzvf PhysiCell-model-builder-2.10.1.tar.gz` to decompress the tar.gz file.
+3. Type `ln -s PhysiCell-model-builder-2.10.1/ PhysiCell-model-builder`  to symbolically link the current version to a generic name.
+4. Use `cd` to navigate into your local binary folder `~/.local/bin/`.
+5. Write a `PhysiCell_Studio` executable file by typing `echo "python3 $HOME/.local/lib/PhysiCell-model-builder/bin/pmb.py --studio" > PhysiCell_Studio`.
+6. Type `chmod 775 PhysiCell\_Studio` to make the file executable.
+
+Now you should be able to start `PhysiCell_Studio` from everywhere at the command line, by just typing `PhysiCell_Studio`.
 
 # Getting Started
 
